@@ -336,8 +336,9 @@ param.buttons <- function(main,group) {
 
   ## the group
   buttons.grp <- ggroup(horizontal=TRUE, spacing=15, container=group)
-  
-  gbutton(action=gaction(label="Restart", icon="new",
+
+    ## FIXME: icon="new",
+  gbutton(action=gaction(label="Restart", icon=NULL,
             handler=function(h,...){param.clearup(main); stage1(main)}),
           container=buttons.grp)
 
@@ -390,7 +391,7 @@ param.evaluate <- function(main) {
   
   if (isTRUE(distr.assign)) {
     cat(">",Rcode.show$distr,"\n")
-    assign(distr.var, val=distr.obj, envir=tag(main,"envir"))
+    assign(distr.var, value=distr.obj, envir=tag(main,"envir"))
   }
 
   ## create UNU.RAN generator object 
@@ -401,7 +402,7 @@ param.evaluate <- function(main) {
 
   if (isTRUE(gen.assign)) {
     cat(">",Rcode.show$gen,"\n")
-    assign(gen.var, val=gen.obj, envir=tag(main,"envir"))
+    assign(gen.var, value=gen.obj, envir=tag(main,"envir"))
   }
 
   ## create random sample
@@ -410,7 +411,7 @@ param.evaluate <- function(main) {
     cat(">",Rcode.show$sample,"\n")
     x <- param.unuran.run(Rcode$sample, "UNU.RAN Generator Object",
                           gen.obj=gen.obj, n=sample.size)
-    assign(sample.var, val=x, envir=tag(main,"envir"))
+    assign(sample.var, value=x, envir=tag(main,"envir"))
   }
 
   ## start stage 3
@@ -420,7 +421,8 @@ param.evaluate <- function(main) {
   ## or pop up a message
   else
     mygmessage("UNU.RAN generator object successfully generated.",
-             title="UNU.RAN - message", icon="info")
+               title="UNU.RAN - message", icon=NULL)
+    ## FIXME: icon="info")
 }
 
 ## --------------------------------------------------------------------------

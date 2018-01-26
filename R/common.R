@@ -30,7 +30,10 @@ mygmessage <- function(msg, title, icon) {
 
 error.message <- function(msg, title="UNU.RAN - Error") {
   ## galert(message,title=title,delay=100)
-  mygmessage(msg, title=title, icon="error")
+  mygmessage(msg, title=title, icon=NULL)
+
+  ## FIXME
+    ## mygmessage(msg, title=title, icon="error")
 }
 
 
@@ -39,7 +42,9 @@ error.message <- function(msg, title="UNU.RAN - Error") {
 
 internal.error <- function(msg="unknown") {
   text <- paste("Internal error!\n\n", msg, "\n\nPlease report.",sep="")
-  mygmessage(text, title="Internal error",icon="error")
+  mygmessage(text, title="Internal error",icon=NULL)
+  ## FIXME
+  ##mygmessage(text, title="Internal error",icon="error")
   stop (text)
 }
 
@@ -129,9 +134,9 @@ get.help.text <- function(topic) {
   if (is.null(pkgname)) return(NULL)
 
   ## read help text 
-  help.txt <- ""  ## keep R CMD check happy
+  help.txt <- ""
   help.con <- textConnection("help.txt", "w", local = TRUE)
-  tools::Rd2txt(utils:::.getHelpFile(out), out=help.con, package=pkgname,
+  tools::Rd2txt(my.getHelpFile(out), out=help.con, package=pkgname,
                 width=80L)
   close(help.con)
 

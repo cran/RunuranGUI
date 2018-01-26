@@ -12,12 +12,12 @@ DEVEL <- TRUE
 
 ## if TRUE, then all tests are performed
 ALL <- TRUE
-##ALL <- FALSE
+ALL <- FALSE
 
 ## if TRUE, then dialog boxes are non-modal (use galert instead of gmessage)
 ## (works in developement mode only!)
 TESTING <- TRUE
-##TESTING <- FALSE
+TESTING <- FALSE
 
 ## time unit (speed) for running tests
 time.unit <- 1
@@ -472,13 +472,18 @@ if (ALL) {
 #############################################################################
 
 if (0) {
+#  options("guiToolkit"="tcltk")
+#  options("guiToolkit"="Qt") 
   w <- unuran.gui()
 
   ## -- Automatic ---
   emul.stage1(w, delay=0, button="ok",
               distr=list(type="cont",cont="Normal"),
               method=list(type="Automatic"))
-  emul.stage2(w, delay=100*delay, button="cancel")
+#  emul.stage2(w, delay=delay, button="ok",
+#              action=list(notebook=TRUE))
+  Sys.sleep(1000)
+#  emul.stage2(w, delay=100*delay, button="cancel")
 }
 
 

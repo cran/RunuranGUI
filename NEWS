@@ -1,4 +1,9 @@
 
+Version 0.2: 2018-01-26
+
+	- explicitly import functions from standard packages.
+	
+
 Version 0.1: 2010-10-25
 
         - First public release.

@@ -1,4 +1,12 @@
 
-import("methods")
+import("cairoDevice")
+import("gWidgets")
+import("gWidgetsRGtk2")
+import("Runuran")
+import("rvgtest")
+
+importFrom("graphics", "plot")
+importFrom("methods", "show")
+importFrom("utils", "capture.output")
 
 export(unuran.gui)
