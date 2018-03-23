@@ -29,11 +29,8 @@ mygmessage <- function(msg, title, icon) {
 ## Error message
 
 error.message <- function(msg, title="UNU.RAN - Error") {
-  ## galert(message,title=title,delay=100)
-  mygmessage(msg, title=title, icon=NULL)
-
-  ## FIXME
-    ## mygmessage(msg, title=title, icon="error")
+    ## galert(message,title=title,delay=100)
+    mygmessage(msg, title=title, icon="error")
 }
 
 
@@ -42,9 +39,7 @@ error.message <- function(msg, title="UNU.RAN - Error") {
 
 internal.error <- function(msg="unknown") {
   text <- paste("Internal error!\n\n", msg, "\n\nPlease report.",sep="")
-  mygmessage(text, title="Internal error",icon=NULL)
-  ## FIXME
-  ##mygmessage(text, title="Internal error",icon="error")
+  mygmessage(text, title="Internal error",icon="error")
   stop (text)
 }
 

@@ -69,12 +69,12 @@ experim.notebook <- function (win) {
   ## toolbar buttons:
 
   ## quit notebook
-  aQuit  <- gaction(label="Quit", icon=NULL, ## FIXME:  icon="quit",
+  aQuit  <- gaction(label="Quit", icon="quit",
                     tooltip="Quit notebook",
                     handler=function(h,...){dispose(win)})
 
   ## close current page
-  aClose <- gaction(label="Close", icon=NULL, ## FIXME:  icon="close",
+  aClose <- gaction(label="Close", icon="close",
                     tooltip="Close current page",
                     handler=function(h,...) {
                       nb <- tag(win,"nb")
@@ -83,7 +83,7 @@ experim.notebook <- function (win) {
                     })
   
   ## evaluate page
-  aRun <- gaction(label="Run", icon=NULL, ## FIXME:  icon="execute",
+  aRun <- gaction(label="Run", icon="execute",
                   tooltip="Evaluate page",
                   handler=function(h,...) {
                     nb <- tag(win,"nb")
@@ -94,7 +94,7 @@ experim.notebook <- function (win) {
   enabled(aRun) <- FALSE
 
   ## draw histogram
-  aHist <- gaction(label="Histogram", icon=NULL, ## FIXME:  icon="hist",
+  aHist <- gaction(label="Histogram", icon="hist",
                   tooltip="Draw histogram",
                   handler=function(h,...) {
                     nb <- tag(win,"nb")
@@ -105,7 +105,7 @@ experim.notebook <- function (win) {
   enabled(aHist) <- FALSE
 
   ## plot result
-  aPlot <- gaction(label="Plot", icon=NULL, ## FIXME:  icon="plot",
+  aPlot <- gaction(label="Plot", icon="plot",
                   tooltip="Plot results",
                   handler=function(h,...) {
                     nb <- tag(win,"nb")

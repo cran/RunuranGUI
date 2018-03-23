@@ -1,7 +1,14 @@
 
+Version 0.3: 2018-03-23
+
+	- fixed a problems with icons
+
+
 Version 0.2: 2018-01-26
 
 	- explicitly import functions from standard packages.
+
+	- fixed warnings from CRAN.
 	
 
 Version 0.1: 2010-10-25

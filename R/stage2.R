@@ -337,8 +337,7 @@ param.buttons <- function(main,group) {
   ## the group
   buttons.grp <- ggroup(horizontal=TRUE, spacing=15, container=group)
 
-    ## FIXME: icon="new",
-  gbutton(action=gaction(label="Restart", icon=NULL,
+  gbutton(action=gaction(label="Restart", icon="new",
             handler=function(h,...){param.clearup(main); stage1(main)}),
           container=buttons.grp)
 
@@ -421,8 +420,7 @@ param.evaluate <- function(main) {
   ## or pop up a message
   else
     mygmessage("UNU.RAN generator object successfully generated.",
-               title="UNU.RAN - message", icon=NULL)
-    ## FIXME: icon="info")
+               title="UNU.RAN - message", icon="info")
 }
 
 ## --------------------------------------------------------------------------

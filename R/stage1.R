@@ -191,8 +191,7 @@ type.buttons <- function(main,group) {
   ## the group
   buttons.grp <- ggroup(horizontal=TRUE, spacing=15, container=group)
 
-  ## FIXME: icon="new"  
-  gbutton(action=gaction(label="Restart", icon=NULL,
+  gbutton(action=gaction(label="Restart", icon="new",
           handler=function(h,...){type.clearup(main); stage1(main)}),
           container=buttons.grp)
 
